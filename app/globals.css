@@ -4,7 +4,7 @@
 
 :root {
   color: black;
-  background: rgb(214, 219, 220);
+  background: rgb(240, 245, 250);
 }
 
 :root:has(body.dark) {
