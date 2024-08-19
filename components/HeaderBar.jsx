@@ -39,15 +39,19 @@ const HeaderBar = () => {
             <List
               size={48}
               className={
-                (isNavOpen ? "scale-y-0" : "scale-y-100") +
-                " absolute top-0 left-0 transition-transform"
+                (isNavOpen
+                  ? "scale-y-0 opacity-0"
+                  : "scale-y-100 opacity-100 ") +
+                " absolute top-0 left-0 transition-[transform_opacity]"
               }
             />
             <X
               size={48}
               className={
-                (isNavOpen ? "scale-y-100" : "scale-y-0") +
-                " absolute bottom-0 left-0 transition-transform"
+                (isNavOpen
+                  ? "scale-y-100 opacity-100"
+                  : "scale-y-0 opacity-0") +
+                " absolute bottom-0 left-0 transition-[transform_opacity]"
               }
             />
           </button>

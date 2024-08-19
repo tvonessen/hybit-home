@@ -2,7 +2,7 @@ import React, { isValidElement } from "react";
 
 export default function Projects() {
   return (
-    <div className="mx-5">
+    <div>
       <h1 className="text-3xl">PROJECTS</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, vel? Sed,
