@@ -9,9 +9,7 @@ import {
   DropdownItem,
   Button,
 } from "@nextui-org/react";
-import { Moon, LightningA, Sun } from "@phosphor-icons/react";
-import auto from "public/auto.svg";
-import Image from "next/image";
+import { Moon, Sun } from "@phosphor-icons/react";
 
 const DarkModeButton = () => {
   const [theme, setTheme] = useLocalStorage("theme", "auto");
