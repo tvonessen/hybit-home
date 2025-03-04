@@ -1,27 +1,32 @@
 {
-  "name": "hybit-home",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@nextui-org/react": "^2.4.6",
-    "@phosphor-icons/react": "^2.1.7",
-    "@uidotdev/usehooks": "^2.4.1",
-    "framer-motion": "^11.3.28",
-    "next": "14.2.5",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.5.4"
-  }
+	"name": "hybit-home",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@heroui/react": "2.7.4",
+		"@phosphor-icons/react": "^2.1.7",
+		"@tailwindcss/postcss": "^4.0.9",
+		"@uidotdev/usehooks": "^2.4.1",
+		"autoprefixer": "^10.4.20",
+		"framer-motion": "^12.4.10",
+		"next": "15.2.1",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "22.13.9",
+		"@types/react": "19.0.10",
+		"eslint": "^9.21.0",
+		"eslint-config-next": "15.2.1",
+		"postcss": "^8.5.3",
+		"tailwindcss": "^4.0.9",
+		"typescript": "^5.8.2"
+	}
 }

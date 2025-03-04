@@ -1,19 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
-  color: black;
-  background: rgb(240, 245, 250);
+	color: black;
+	background: rgb(240, 245, 250);
 }
 
 :root:has(body.dark) {
-  color: white;
-  background: black;
+	color: white;
+	background: black;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+button {
+	@apply hover:cursor-pointer;
+}
+
+@utility text-balance {
+	text-wrap: balance;
 }
