@@ -12,9 +12,11 @@ const MainNav = ({ isOpenState }) => {
 	const router = useRouter();
 	const transform = "skew-x-6 -skew-y-12 rotate-6";
 
-	const handleNavigate = (href) => {
+	const handleNavigate = (href: string) => {
 		toggleState(false);
-		router.push(href);
+		setTimeout(() => {
+			router.push(href);
+		}, 250);
 	};
 
 	return (
@@ -35,22 +37,16 @@ const MainNav = ({ isOpenState }) => {
 				Where shall I take you?
 			</h2>
 			<div className="flex flex-col w-fit justify-center items-start gap-10 ps-4">
-				<NavLink
-					href="/"
-					className={`${transform}`}
-					onClick={() => handleNavigate("/")}
-				>
+				<NavLink className={`${transform}`} onClick={() => handleNavigate("/")}>
 					<HouseSimple /> Home
 				</NavLink>
 				<NavLink
-					href="projects"
 					className={`${transform}`}
 					onClick={() => handleNavigate("projects")}
 				>
 					<FolderSimple /> Projects
 				</NavLink>
 				<NavLink
-					href="contact"
 					className={`${transform}`}
 					onClick={() => handleNavigate("contact")}
 				>
