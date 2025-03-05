@@ -17,8 +17,8 @@ const DarkModeButton = () => {
 	const Auto = () => {
 		return (
 			<svg
-				width="24"
-				height="24"
+				width="30"
+				height="30"
 				viewBox="0 0 256 256"
 				version="1.1"
 				xmlns="http://www.w3.org/2000/svg"
@@ -69,11 +69,11 @@ const DarkModeButton = () => {
 				label: "Auto",
 			},
 			light: {
-				icon: <Sun size="24" weight={theme === "dark" ? "fill" : "regular"} />,
+				icon: <Sun size="30" weight={theme === "dark" ? "fill" : "regular"} />,
 				label: "Light",
 			},
 			dark: {
-				icon: <Moon size="24" weight={theme === "dark" ? "regular" : "fill"} />,
+				icon: <Moon size="30" weight={theme === "dark" ? "regular" : "fill"} />,
 				label: "Dark",
 			},
 		}),
@@ -94,8 +94,8 @@ const DarkModeButton = () => {
 		<Dropdown className="min-w-0">
 			<DropdownTrigger>
 				<Button
-					variant="bordered"
-					className="bg-background border-1"
+					variant="ghost"
+					className="h-14 w-14 bg-background border-0"
 					size="lg"
 					isIconOnly
 				>

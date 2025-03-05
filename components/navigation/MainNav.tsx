@@ -19,12 +19,12 @@ const MainNav = ({ isOpenState }) => {
 
 	return (
 		<div
-			className={`z-50 w-screen h-[calc(100vh_-_6rem)] flex flex-col items-center justify-start ${
+			className={`fixed inset-0 z-40 w-screen h-screen mt-[25vh] flex flex-col items-center justify-start ${
 				isOpen === true
-					? "-left-[2.5%] top-40"
+					? "-left-[2.5%] top-0"
 					: isOpen === null
-						? "-left-full top-[calc(10rem_+_10vw)]"
-						: "left-full top-[calc(10rem_-_10vw)]"
+						? "-left-full top-[10vw]"
+						: "left-full top-[-10vw]"
 			} ${
 				isOpen ? "opacity-100" : "opacity-0"
 			} fixed text-[currentcolor] transition-all duration-500`}

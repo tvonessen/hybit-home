@@ -6,6 +6,7 @@ import React from "react";
 import DarkModeButton from "./DarkModeButton";
 import Logo from "./Logo";
 import MainNav from "./navigation/MainNav";
+import { Button } from "@heroui/react";
 
 const HeaderBar = () => {
 	const [isNavOpen, setIsNavOpen] = React.useState(false);
@@ -35,24 +36,26 @@ const HeaderBar = () => {
 				</Link>
 				<div className="flex flex-row gap-3 items-center">
 					<DarkModeButton />
-					<button
-						type="button"
-						className="cursor-pointer block h-12 w-12 relative"
-						onClick={toggleNav}
+					<Button
+						className="w-14 h-14 bg-background border-0"
+						size="lg"
+						onPress={toggleNav}
+						variant="ghost"
+						isIconOnly
 					>
 						<List
-							size={48}
+							size={32}
 							className={`${
 								isNavOpen ? "scale-y-0 opacity-0" : "scale-y-100 opacity-100 "
-							} absolute top-0 left-0 transition-[transform_opacity]`}
+							} absolute transition-[transform_opacity]`}
 						/>
 						<X
-							size={48}
+							size={32}
 							className={`${
 								isNavOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
-							} absolute bottom-0 left-0 transition-[transform_opacity]`}
+							} absolute transition-[transform_opacity]`}
 						/>
-					</button>
+					</Button>
 				</div>
 			</nav>
 			<MainNav isOpenState={[isNavOpen, toggleNav]} />

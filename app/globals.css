@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-	--color-foreground: #131313;
-	--color-background: #f8f8f8;
+	--color-foreground: #09090a;
+	--color-background: #f0f8f8;
 	--color-primary: #ff6649;
 	--color-secondary: #099;
 
@@ -13,8 +13,8 @@
 }
 
 :root:has(body.dark) {
-	--color-foreground: #f8f8f8;
-	--color-background: #131313;
+	--color-foreground: #f0f8f8;
+	--color-background: #09090a;
 }
 
 button {
