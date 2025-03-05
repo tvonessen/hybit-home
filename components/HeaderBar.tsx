@@ -17,11 +17,11 @@ const HeaderBar = () => {
 		const backdrop = document.getElementById("main-content");
 		if (!backdrop) return;
 		if (targetState === true) {
-			backdrop.classList.add("blur-sm", "opacity-50");
+			backdrop.classList.add("blur-[6px]", "opacity-20");
 			setIsNavOpen(true);
 		} else {
 			setIsNavOpen(null);
-			backdrop.classList.remove("blur-sm", "opacity-50");
+			backdrop.classList.remove("blur-[6px]", "opacity-20");
 			setTimeout(() => {
 				setIsNavOpen(false);
 			}, 500);

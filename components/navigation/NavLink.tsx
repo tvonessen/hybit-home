@@ -15,10 +15,10 @@ const NavLink = React.memo(({ className, children, onClick }: NavLinkProps) => {
 			onClick={onClick}
 		>
 			<div className="transition-[filter] flex flex-row gap-2">{children}</div>
-			<div className="opacity-0 select-none flex absolute h-full flex-row justify-center items-center top-0 -left-12 group-hover:opacity-100 group-focus-visible:opacity-100">
+			<div className="opacity-0 select-none flex absolute h-full flex-row justify-center items-center top-0 -left-12 group-hover:opacity-100 group-focus-visible:opacity-100 group-hover:duration-500 duration-200">
 				<CaretRight />
 			</div>
-			<div className="opacity-0 select-none flex absolute h-full flex-row justify-center items-center top-0 -right-12 group-hover:opacity-100 group-focus-visible:opacity-100">
+			<div className="opacity-0 select-none flex absolute h-full flex-row justify-center items-center top-0 -right-12 group-hover:opacity-100 group-focus-visible:opacity-100 group-hover:duration-500 duration-200">
 				<CaretLeft />
 			</div>
 		</button>
