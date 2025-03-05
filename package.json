@@ -12,7 +12,6 @@
 		"@biomejs/biome": "^1.9.4",
 		"@heroui/react": "2.7.4",
 		"@phosphor-icons/react": "^2.1.7",
-		"@uidotdev/usehooks": "^2.4.1",
 		"autoprefixer": "^10.4.20",
 		"framer-motion": "^12.4.10",
 		"next": "15.2.1",

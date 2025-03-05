@@ -17,8 +17,8 @@ const DarkModeButton = () => {
 	const Auto = () => {
 		return (
 			<svg
-				width="24px"
-				height="24px"
+				width="24"
+				height="24"
 				viewBox="0 0 256 256"
 				version="1.1"
 				xmlns="http://www.w3.org/2000/svg"
@@ -93,8 +93,13 @@ const DarkModeButton = () => {
 	return (
 		<Dropdown className="min-w-0">
 			<DropdownTrigger>
-				<Button variant="light" size="lg" isIconOnly>
-					{themes[theme].icon}
+				<Button
+					variant="bordered"
+					className="bg-background border-1"
+					size="lg"
+					isIconOnly
+				>
+					{themes[theme ?? "auto"].icon}
 				</Button>
 			</DropdownTrigger>
 			<DropdownMenu

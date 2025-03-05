@@ -3,19 +3,39 @@
 @tailwind utilities;
 
 :root {
-	color: black;
-	background: rgb(240, 245, 250);
+	--color-foreground: #131313;
+	--color-background: #f8f8f8;
+	--color-primary: #ff6649;
+	--color-secondary: #099;
+
+	color: var(--color-foreground);
+	background: var(--color-background);
 }
 
 :root:has(body.dark) {
-	color: white;
-	background: black;
+	--color-foreground: #f8f8f8;
+	--color-background: #131313;
 }
 
 button {
 	@apply hover:cursor-pointer;
 }
 
-@utility text-balance {
-	text-wrap: balance;
+@layer components {
+	.bg-hatching {
+		background-image: repeating-linear-gradient(
+			-45deg,
+			color-mix(in srgb, var(--color-foreground) 12%, transparent) 0,
+			color-mix(in srgb, var(--color-foreground) 12%, transparent) 1px,
+			transparent 0,
+			transparent 50%
+		);
+		background-size: 24px 24px;
+	}
+}
+
+@layer utilities {
+	text-balance {
+		text-wrap: balance;
+	}
 }

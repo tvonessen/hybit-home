@@ -15,21 +15,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en" className="transition-colors duration-150">
+		<html lang="en">
 			<body
-				className={`${raleway.className} transition-colors duration-150 container mx-auto mt-2`}
+				className={`${raleway.className} transition-colors duration-150 w-screen min-h-screen`}
 			>
-				<Providers>
-					<header>
-						<HeaderBar />
-					</header>
-					<main
-						id="main-content"
-						className="mt-12 mx-5 transition-[filter,opacity] duration-500"
-					>
-						{children}
-					</main>
-				</Providers>
+				<Providers>{children}</Providers>
 			</body>
 		</html>
 	);

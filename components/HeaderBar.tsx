@@ -27,13 +27,9 @@ const HeaderBar = () => {
 		}
 	};
 
-	// const DarkModeButton = dynamic(() => import("./DarkModeButton"), {
-	// 	ssr: false,
-	// });
-
 	return (
-		<>
-			<nav className="w-full flex h-24 justify-between p-5 flex-row transition-[filter]">
+		<header className="fixed z-50 top-0 left-0 w-full">
+			<nav className="container mx-auto flex h-24 justify-between p-5 flex-row transition-[filter]">
 				<Link href="/" className="h-full">
 					<Logo border="currentcolor" fill={isNavOpen ? "none" : undefined} />
 				</Link>
@@ -60,7 +56,7 @@ const HeaderBar = () => {
 				</div>
 			</nav>
 			<MainNav isOpenState={[isNavOpen, toggleNav]} />
-		</>
+		</header>
 	);
 };
 
