@@ -8,8 +8,8 @@ import {
 	DropdownTrigger,
 } from "@heroui/react";
 import { Moon, Sun } from "@phosphor-icons/react";
-import { useLocalStorage } from "@uidotdev/usehooks";
 import React from "react";
+import { useLocalStorage } from "usehooks-ts";
 
 const DarkModeButton = () => {
 	const [theme, setTheme] = useLocalStorage("theme", "auto");
@@ -93,22 +93,25 @@ const DarkModeButton = () => {
 	return (
 		<Dropdown className="min-w-0">
 			<DropdownTrigger>
-				<Button variant="light" size="sm" className="px-2 min-w-0">
+				<Button variant="light" size="lg" isIconOnly>
 					{themes[theme].icon}
 				</Button>
 			</DropdownTrigger>
-			<DropdownMenu>
+			<DropdownMenu
+				aria-label="Select dark mode"
+				selectedKeys={[theme]}
+				variant="solid"
+				selectionMode="single"
+				onSelectionChange={(keys) => {
+					console.log([...keys][0]);
+					setTheme(keys.currentKey);
+				}}
+			>
 				{Object.entries(themes).map(([key, value]) => (
-					<DropdownItem
-						key={key}
-						onPress={() => {
-							setTheme(key);
-						}}
-						data-active={theme === key}
-					>
-						<div className="flex flex-row items-center">
-							{value.icon}
-							<span className="ml-2">{value.label}</span>
+					<DropdownItem key={key} className="my-1">
+						<div className="flex flex-row items-center px-1 gap-3">
+							<span>{value.icon}</span>
+							<span>{value.label}</span>
 						</div>
 					</DropdownItem>
 				))}

@@ -27,6 +27,10 @@ const HeaderBar = () => {
 		}
 	};
 
+	// const DarkModeButton = dynamic(() => import("./DarkModeButton"), {
+	// 	ssr: false,
+	// });
+
 	return (
 		<>
 			<nav className="w-full flex h-24 justify-between p-5 flex-row transition-[filter]">
