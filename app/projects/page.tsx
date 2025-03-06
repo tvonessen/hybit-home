@@ -2,7 +2,7 @@ import React, { isValidElement } from "react";
 
 export default function Projects() {
 	return (
-		<main className="container max-w-3xl mx-auto mt-36">
+		<main className="container max-w-3xl mx-auto mt-1 pt-36">
 			<h1 className="text-3xl mb-4 font-semibold">PROJECTS</h1>
 			<p className="mb-4">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, vel? Sed,

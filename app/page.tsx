@@ -6,7 +6,7 @@ export default function Home() {
 	return (
 		<>
 			<Jumbo />
-			<section className="container mx-auto mt-36">
+			<section className="container mx-auto mt-1 pt-36">
 				<h2 className="text-3xl font-medium mb-4">Hello world</h2>
 				<p className="mb-4">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, vel?

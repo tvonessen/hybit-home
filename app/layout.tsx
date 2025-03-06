@@ -15,10 +15,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html lang="en" className="!scroll-smooth" suppressHydrationWarning>
 			<body
 				className={`${raleway.className} transition-colors duration-150 w-screen min-h-screen`}
 			>
+				<div />
 				<Providers>
 					<HeaderBar />
 					<div

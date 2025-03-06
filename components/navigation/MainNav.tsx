@@ -15,7 +15,7 @@ const MainNav = ({ isOpenState }) => {
 	const handleNavigate = (href: string) => {
 		toggleState(false);
 		setTimeout(() => {
-			router.push(href, { scroll: false });
+			router.push(href);
 		}, 250);
 	};
 
