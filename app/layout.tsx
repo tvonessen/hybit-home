@@ -15,11 +15,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<body
 				className={`${raleway.className} transition-colors duration-150 w-screen min-h-screen`}
 			>
-				<Providers>{children}</Providers>
+				<Providers>
+					<HeaderBar />
+					<div
+						id="main-content"
+						className="relative z-10 w-full min-h-full transition-[filter,opacity] duration-500"
+					>
+						{children}
+					</div>
+				</Providers>
 			</body>
 		</html>
 	);

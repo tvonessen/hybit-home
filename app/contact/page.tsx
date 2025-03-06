@@ -1,5 +1,9 @@
-import React, { isValidElement } from "react";
+import React from "react";
 
 export default function Contact() {
-	return <h1 className="text-3xl">CONTACT FORM</h1>;
+	return (
+		<main className="container mx-auto mt-36">
+			<h1 className="text-3xl">CONTACT FORM</h1>
+		</main>
+	);
 }

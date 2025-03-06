@@ -3,9 +3,18 @@ interface LogoProps {
 	border?: string;
 	style?: React.CSSProperties;
 	className?: string;
+	height?: string;
+	width?: string;
 }
 
-const Logo = ({ fill, border, style, className = "" }: LogoProps) => {
+const Logo = ({
+	fill,
+	border,
+	style,
+	className = "",
+	height,
+	width,
+}: LogoProps) => {
 	const getFill = (index = 0) => {
 		if (Array.isArray(fill)) return fill[index];
 		if (fill === "none") return "transparent";
@@ -17,8 +26,8 @@ const Logo = ({ fill, border, style, className = "" }: LogoProps) => {
 	return (
 		<svg
 			className={className}
-			width="100%"
-			height="100%"
+			width={width ?? "100%"}
+			height={height ?? "100%"}
 			viewBox="0 0 1096 450"
 			version="1.1"
 			xmlns="http://www.w3.org/2000/svg"

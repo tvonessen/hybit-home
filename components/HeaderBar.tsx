@@ -7,9 +7,30 @@ import DarkModeButton from "./DarkModeButton";
 import Logo from "./Logo";
 import MainNav from "./navigation/MainNav";
 import { Button } from "@heroui/react";
+import { usePathname } from "next/navigation";
 
 const HeaderBar = () => {
 	const [isNavOpen, setIsNavOpen] = React.useState(false);
+	const logoRef = React.useRef<HTMLAnchorElement>(null);
+
+	const pathname = usePathname();
+
+	React.useLayoutEffect(() => {
+		if (pathname === "/") {
+			function handleScroll() {
+				if (window.scrollY > window.innerHeight / 2) {
+					logoRef.current.style.opacity = "100%";
+					logoRef.current.style.pointerEvents = "auto";
+				} else {
+					logoRef.current.style.opacity = "0%";
+					logoRef.current.style.pointerEvents = "none";
+				}
+			}
+			handleScroll();
+			document.addEventListener("scroll", handleScroll);
+			return () => document.removeEventListener("scroll", handleScroll);
+		}
+	}, [pathname]);
 
 	const toggleNav = (state) => {
 		const targetState =
@@ -30,8 +51,19 @@ const HeaderBar = () => {
 
 	return (
 		<header className="fixed z-50 top-0 left-0 w-full">
-			<nav className="container mx-auto flex h-24 justify-between p-5 flex-row transition-[filter]">
-				<Link href="/" className="h-full">
+			<nav
+				className={`container mx-auto flex h-24 justify-between p-3 flex-row transition-[filter] ${pathname === "/" ? "" : "bg-background"}`}
+			>
+				<Link
+					href="/"
+					className="h-full px-3 py-2 bg-background rounded-md"
+					ref={logoRef}
+					style={{
+						transition: "opacity 0.4s",
+						opacity: pathname === "/" ? "0%" : "100%",
+						pointerEvents: pathname === "/" ? "none" : "auto",
+					}}
+				>
 					<Logo border="currentcolor" fill={isNavOpen ? "none" : undefined} />
 				</Link>
 				<div className="flex flex-row gap-3 items-center">

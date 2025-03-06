@@ -15,13 +15,18 @@ const MainNav = ({ isOpenState }) => {
 	const handleNavigate = (href: string) => {
 		toggleState(false);
 		setTimeout(() => {
-			router.push(href);
+			router.push(href, { scroll: false });
 		}, 250);
 	};
 
+	function handleClose() {
+		toggleState(false);
+	}
+
 	return (
+		// biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
 		<div
-			className={`fixed inset-0 z-40 w-screen h-screen mt-[25vh] flex flex-col items-center justify-start ${
+			className={`fixed inset-0 z-30 w-screen h-screen mt-[80px] pt-[calc(25vh_-_80px)] flex flex-col items-center justify-start ${
 				isOpen === true
 					? "-left-[2.5%] top-0"
 					: isOpen === null
@@ -30,6 +35,7 @@ const MainNav = ({ isOpenState }) => {
 			} ${
 				isOpen ? "opacity-100" : "opacity-0"
 			} fixed text-[currentcolor] transition-all duration-500`}
+			onClick={handleClose}
 		>
 			<h2
 				className={`block text-2xl sm:text-4xl font-black ${transform} mb-24`}
