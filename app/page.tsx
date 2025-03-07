@@ -1,70 +1,142 @@
 import Jumbo from "@/components/Jumbo";
-import Logo from "@/components/Logo";
+import NavButton from "@/components/navigation/NavButton";
+import {
+	GraduationCap,
+	HandWaving,
+	Heart,
+	Atom,
+	Flask,
+	Signpost,
+	Wall,
+	Star,
+	Speedometer,
+	Recycle,
+	Trophy,
+	HandPeace,
+	HandPointing,
+} from "@phosphor-icons/react/dist/ssr";
+import Image from "next/image";
 import React from "react";
 
 export default function Home() {
 	return (
 		<>
 			<Jumbo />
-			<section className="container mx-auto mt-1 pt-36">
-				<h2 className="text-3xl font-medium mb-4">Hello world</h2>
-				<p className="mb-4">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, vel?
-					Sed, debitis! Laboriosam iusto maxime quidem quam ullam, saepe aperiam
-					in voluptate impedit, sit quisquam vel ipsa quis dolores ipsum.
-					Tenetur laudantium incidunt facilis nihil harum autem eos veritatis.
-					Placeat, quod? Cum temporibus doloribus cumque, aperiam voluptates
-					ducimus illo officiis molestias reprehenderit voluptas odit delectus,
-					distinctio deserunt assumenda neque officia! Nobis, unde. Similique,
-					quas. Veritatis nemo dolorum qui temporibus, dolorem a facere eligendi
-					sequi ipsum ratione eum quo sunt earum nihil est, ab eius quos aliquam
-					possimus recusandae, iure culpa. Eligendi tenetur necessitatibus
-					optio. Voluptates ex ad obcaecati sint perferendis minus rem doloribus
-					a culpa aliquam tempore veritatis itaque voluptas, optio excepturi, et
-					sapiente accusantium molestiae provident nemo? Qui, quaerat? Quia
-					neque nemo est quis reiciendis, quasi sit dolores amet tenetur? Quis
-					veniam totam autem cum accusamus. Delectus cumque aspernatur nulla,
-					voluptates cum sit laboriosam possimus aliquid libero reiciendis
-					soluta.
+			<section className="container mx-auto px-6 mt-12 pt-32 text-xl leading-relaxed">
+				<Image
+					alt="Portait of Tobias von Essen"
+					src="/img/DSC139949.jpg"
+					sizes="(min-width: 1280px) 480px, (min-width: 1024px) 360px, 280px"
+					width={480}
+					height={640}
+					className="w-[280px] sm:w-[280px] lg:w-[360px] aspect-square sm:aspect-auto object-cover rounded-xl sm:float-end  mx-auto sm:ms-8 mb-8"
+				/>
+
+				<h2 className="text-3xl font-medium mb-12">
+					Hey there!{" "}
+					<HandWaving
+						weight="duotone"
+						className="text-yellow-600 inline-block -mt-2 text-4xl"
+					/>
+				</h2>
+				<p className="mb-16">
+					I am a web developer and designer based in Berlin area, Germany. I{" "}
+					<Heart
+						weight="fill"
+						className="fill-primary text-2xl inline-block -mt-1"
+					/>{" "}
+					tinkering with web technologies and creating beautiful, functional
+					websites.
 				</p>
-				<p className="mb-4">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, vel?
-					Sed, debitis! Laboriosam iusto maxime quidem quam ullam, saepe aperiam
-					in voluptate impedit, sit quisquam vel ipsa quis dolores ipsum.
-					Tenetur laudantium incidunt facilis nihil harum autem eos veritatis.
-					Placeat, quod? Cum temporibus doloribus cumque, aperiam voluptates
-					ducimus illo officiis molestias reprehenderit voluptas odit delectus,
-					distinctio deserunt assumenda neque officia! Nobis, unde. Similique,
-					quas. Veritatis nemo dolorum qui temporibus, dolorem a facere eligendi
-					sequi ipsum ratione eum quo sunt earum nihil est, ab eius quos aliquam
-					possimus recusandae, iure culpa. Eligendi tenetur necessitatibus
-					optio. Voluptates ex ad obcaecati sint perferendis minus rem doloribus
-					a culpa aliquam tempore veritatis itaque voluptas, optio excepturi, et
-					sapiente accusantium molestiae provident nemo? Qui, quaerat? Quia
-					neque nemo est quis reiciendis, quasi sit dolores amet tenetur? Quis
-					veniam totam autem cum accusamus. Delectus cumque aspernatur nulla,
-					voluptates cum sit laboriosam possimus aliquid libero reiciendis
-					soluta.
+				<p className="mb-8">
+					<GraduationCap
+						weight="light"
+						className="fill-secondary float-start text-6xl mx-3"
+					/>
+					Actually, I am a graduated R&D&nbsp;engineer&nbsp;
+					<Flask className="inline-block text-xl -mt-1 text-secondary" />, but
+					ever since the internet became <i>a thing</i> I have been
+					experimenting around with <b className="text-primary">HTML</b>,{" "}
+					<b className="text-purple-600">CSS</b>,{" "}
+					<b className="text-yellow-600">JavaScript</b> and later the CMS{" "}
+					<b className="text-orange-500">TYPO3</b>.
 				</p>
-				<p className="mb-4">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, vel?
-					Sed, debitis! Laboriosam iusto maxime quidem quam ullam, saepe aperiam
-					in voluptate impedit, sit quisquam vel ipsa quis dolores ipsum.
-					Tenetur laudantium incidunt facilis nihil harum autem eos veritatis.
-					Placeat, quod? Cum temporibus doloribus cumque, aperiam voluptates
-					ducimus illo officiis molestias reprehenderit voluptas odit delectus,
-					distinctio deserunt assumenda neque officia! Nobis, unde. Similique,
-					quas. Veritatis nemo dolorum qui temporibus, dolorem a facere eligendi
-					sequi ipsum ratione eum quo sunt earum nihil est, ab eius quos aliquam
-					possimus recusandae, iure culpa. Eligendi tenetur necessitatibus
-					optio. Voluptates ex ad obcaecati sint perferendis minus rem doloribus
-					a culpa aliquam tempore veritatis itaque voluptas, optio excepturi, et
-					sapiente accusantium molestiae provident nemo? Qui, quaerat? Quia
-					neque nemo est quis reiciendis, quasi sit dolores amet tenetur? Quis
-					veniam totam autem cum accusamus. Delectus cumque aspernatur nulla,
-					voluptates cum sit laboriosam possimus aliquid libero reiciendis
-					soluta.
+				<p className="mb-16">
+					Today, I am a full-time frontend developer at a renewable energy
+					company and can follow my passion day by day. I have fallen in love
+					with <b className="text-blue-500 inline-block">TypeScript</b>,{" "}
+					<b className="text-secondary inline-block">
+						<Atom className="inline-block text-2xl -mt-1" />
+						&nbsp;ReactJS
+					</b>{" "}
+					and <b>NextJS</b> and all the modern web technologies, frameworks and
+					libraries that grow faster than my creativity allows me to keep up
+					with.
 				</p>
+			</section>
+
+			<section className="w-full py-16 bg-secondary bg-opacity-10">
+				<div className="container mx-auto px-6 text-xl leading-loose">
+					<p>
+						My key competences are{" "}
+						<Signpost
+							weight="fill"
+							className="inline-block text-secondary text-2xl -mt-1"
+						/>{" "}
+						straightforward and{" "}
+						<Wall
+							weight="fill"
+							className="inline-block text-primary text-2xl -mt-1"
+						/>{" "}
+						robust websites, that provide{" "}
+						<Star
+							weight="bold"
+							className="inline-block text-yellow-500 text-2xl -mt-1"
+						/>{" "}
+						best user experience, run{" "}
+						<Speedometer className="inline-block text-primary text-2xl" />{" "}
+						smoothly and{" "}
+						<Recycle className="inline-block text-secondary text-2xl -mt-1" />{" "}
+						resource-efficient. I like drafting and designing websites from
+						scratch to create{" "}
+						<Trophy
+							weight="duotone"
+							className="inline-block text-yellow-700 text-2xl -mt-1"
+						/>{" "}
+						unique presences on the internet.
+					</p>
+				</div>
+			</section>
+
+			<section className="w-full py-16 bg-hatching">
+				<div className="container mx-auto px-6 py-4 text-xl leading-loose bg-background rounded-3xl">
+					<HandPeace
+						weight="duotone"
+						className="text-4xl mx-auto text-primary my-6"
+					/>
+					<p className="mb-6">
+						Though I am full-time employed, I am always open for{" "}
+						<b>new projects</b> and collaborations. If you have a project in
+						mind, that you think I could help you with, feel free to get in
+						touch with me. I am looking forward to hearing from you!
+					</p>
+					<div className="flex justify-center my-6">
+						<NavButton
+							color="primary"
+							variant="solid"
+							size="lg"
+							type="button"
+							className="font-semibold text-xl italic"
+							href="/contact"
+						>
+							<HandPointing
+								weight="duotone"
+								className="rotate-90 inline-block text-3xl"
+							/>{" "}
+							Get in touch
+						</NavButton>
+					</div>
+				</div>
 			</section>
 		</>
 	);
