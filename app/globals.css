@@ -10,6 +10,17 @@
 
 	color: var(--color-foreground);
 	background: var(--color-background);
+	transition: color 300ms, background-color 300ms, background-image 300ms;
+
+	p {
+		max-width: 75ch;
+		text-wrap: pretty;
+	}
+
+	.grecaptcha-badge {
+		display: none;
+	}
+
 }
 
 :root:has(body.dark) {
@@ -31,6 +42,37 @@ button {
 			transparent 50%
 		);
 		background-size: 24px 24px;
+	}
+
+	.bg-hatching-color {
+		position: relative;
+	}
+
+	.bg-hatching-color::before {
+		position: absolute;
+		opacity: 40%;
+		inset: 0;
+		z-index: -1;
+		content: '';
+		background-image:
+			linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+		background-size: cover;
+		background-clip: border-box;
+		mask-image: repeating-linear-gradient(
+				-45deg,
+				light-dark(white, transparent) 0,
+				light-dark(white, transparent) 2px,
+				light-dark(transparent, white) 0,
+				light-dark(transparent, white) 50%
+			);
+		mask-size: 24px 24px;
+		transition: background-image 1s !important;
+	}
+
+	.shadow-split {
+		color: var(--color-background);
+		box-shadow: 7px 7px var(--color-primary), inset 7px 7px var(--color-secondary);
+		background-color: color-mix(in srgb, var(--color-foreground) 70%, transparent);
 	}
 }
 

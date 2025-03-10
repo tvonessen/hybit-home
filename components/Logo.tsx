@@ -20,7 +20,7 @@ const Logo = ({
 		if (fill === "none") return "transparent";
 		if (fill === "mono") return "#7f7f7f";
 		if (typeof fill === "string") return fill;
-		return ["#ff6649", "#099"][index];
+		return ["var(--color-primary)", "var(--color-secondary)"][index];
 	};
 
 	return (

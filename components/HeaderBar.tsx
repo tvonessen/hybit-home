@@ -50,9 +50,13 @@ const HeaderBar = () => {
 	};
 
 	return (
-		<header className="fixed z-50 top-0 left-0 w-full">
+		<header
+			className={`fixed z-50 top-0 left-0 w-full ${pathname === "/" ? "" : "bg-background"}`}
+		>
 			<nav
-				className={`container mx-auto flex h-24 justify-between p-3 flex-row transition-[filter] ${pathname === "/" ? "" : "bg-background"}`}
+				className={
+					"max-w-6xl mx-auto flex h-24 justify-between p-3 flex-row transition-[filter]"
+				}
 			>
 				<Link
 					href="/"
@@ -91,6 +95,9 @@ const HeaderBar = () => {
 				</div>
 			</nav>
 			<MainNav isOpenState={[isNavOpen, toggleNav]} />
+			{pathname === "/contact" && (
+				<div className="absolute w-full h-4 bg-hatching" aria-hidden />
+			)}
 		</header>
 	);
 };

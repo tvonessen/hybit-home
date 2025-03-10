@@ -3,10 +3,13 @@
 import React from "react";
 import Logo from "./Logo";
 import { CaretDown } from "@phosphor-icons/react";
+import { useRouter } from "next/navigation";
+import { Button } from "@heroui/react";
 
 export default function Jumbo() {
 	const logoRef = React.useRef<HTMLDivElement>(null);
-	const caretRef = React.useRef<HTMLHeadingElement>(null);
+	const caretRef = React.useRef<HTMLButtonElement>(null);
+	const router = useRouter();
 
 	React.useLayoutEffect(() => {
 		const logo = logoRef.current;
@@ -49,7 +52,7 @@ export default function Jumbo() {
 			className="sticky z-10 -top-[calc(100%_-_120px)] w-screen h-screen flex justify-end items-center bg-hatching overflow-hidden"
 		>
 			<div
-				className="bg-background md:rounded-l-3xl w-full md:w-4/6 h-[45vw] sm:h-[25vw] max-h-72 p-6 pb-2 flex flex-col items-start justify-start transition-all duration-500"
+				className="relative bg-background md:rounded-l-3xl w-full md:w-4/6 h-[45vw] sm:h-[25vw] max-h-72 p-6 pb-2 flex flex-col items-start justify-start transition-all duration-700"
 				ref={logoRef}
 			>
 				<Logo
@@ -62,12 +65,18 @@ export default function Jumbo() {
 					HANDCRAFTED WEBDESIGN
 				</h1>
 			</div>
-			<div
-				className="absolute bottom-9 inset-x-1/2 w-10 h-10 -translate-x-5 z-10 bg-background rounded-lg flex justify-center items-center"
+			<Button
+				className="absolute bottom-9 inset-x-1/2 w-12 h-12 -translate-x-5 z-10 bg-background rounded-lg flex justify-center items-center"
 				ref={caretRef}
+				onPress={() => router.push("/")}
+				isIconOnly
 			>
-				<CaretDown size={48} weight="thin" className="opacity-60" />
-			</div>
+				<CaretDown
+					size={48}
+					weight="thin"
+					className="opacity-90 animate-bounce mt-2"
+				/>
+			</Button>
 		</div>
 	);
 }
