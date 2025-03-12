@@ -56,7 +56,7 @@ export default function Jumbo() {
 				ref={logoRef}
 			>
 				<Logo
-					className="relative"
+					className="relative self-start"
 					width="auto"
 					height="auto"
 					border="var(--color-foreground)"
