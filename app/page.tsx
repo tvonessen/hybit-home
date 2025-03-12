@@ -62,9 +62,9 @@ export default function Home() {
 						role="img"
 						aria-label="Graduation cap"
 						weight="light"
-						className="fill-secondary float-start text-6xl mx-3"
+						className="fill-secondary float-start text-6xl md:mx-3 me-2"
 					/>
-					Actually, I am a graduated R&D&nbsp;engineer&nbsp;
+					Actually, I am a graduated R&D engineer{" "}
 					<Flask
 						className="inline-block text-xl -mt-1 text-secondary"
 						aria-hidden="true"
@@ -136,7 +136,7 @@ export default function Home() {
 						out my{" "}
 						<Link
 							href="/projects"
-							className="inline-block font-semibold bg-secondary px-2 mx-1 rounded-lg"
+							className="inline font-semibold bg-primary px-2 py-1 mx-1 rounded-lg text-nowrap"
 						>
 							<ArrowSquareIn size={24} aria-hidden className="inline" />{" "}
 							portfolio
@@ -146,7 +146,7 @@ export default function Home() {
 							href="https://github.com/tvonessen"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="inline-block font-semibold bg-secondary px-2 mx-1 rounded-lg"
+							className="inline font-semibold bg-secondary px-2 py-1 mx-1 rounded-lg text-nowrap"
 						>
 							<GithubLogo
 								size={24}

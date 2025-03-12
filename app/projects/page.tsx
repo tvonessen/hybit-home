@@ -55,7 +55,7 @@ export default function Projects() {
 			<div className="bg-[color-mix(in_srgb,var(--color-background)_70%,transparent)] w-auto max-w-7xl  mx-auto p-4 rounded-3xl">
 				<div className="min-h-[75vh] mx-auto flex flex-col justify-between">
 					<div className="max-w-3xl mx-auto">
-						<h1 className="w-full max-w-full mx-auto mt-16 mb-6 text-3xl font-semibold">
+						<h1 className="w-full max-w-full mx-auto mt-16 text-3xl font-semibold">
 							PROJECTS
 						</h1>
 					</div>
@@ -63,7 +63,7 @@ export default function Projects() {
 						src="/img/bernd-dittrich-E1eKa8PJHTU-unsplash.jpg"
 						alt="Projects image"
 						aria-hidden
-						className="w-full lg:w-5/6 mx-auto mt-6 mb-16 aspect-[21/6] object-cover rounded-2xl !opacity-85 contrast-[0.9] -hue-rotate-[120deg]"
+						className="w-full lg:w-5/6 mx-auto my-6 md:my-12 aspect-[21/10] md:aspect-[21/6] object-cover rounded-2xl !opacity-85 contrast-[0.9] -hue-rotate-[120deg]"
 					/>
 					<div className="max-w-3xl mx-auto">
 						<p className="mb-4 max-w-full mx-auto text-lg leading-loose">
