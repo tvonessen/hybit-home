@@ -1,3 +1,3 @@
 import type { NextConfig } from "next";
 
-export default {} as NextConfig;
+export default {output: "standalone"} as NextConfig;
