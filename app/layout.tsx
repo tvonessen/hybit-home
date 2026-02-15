@@ -1,15 +1,17 @@
 import React from "react";
-import "./globals.css";
 import HeaderBar from "@/components/HeaderBar";
 import {Raleway} from "next/font/google";
 import {Providers} from "./providers";
 import Footer from "@/components/Footer";
+import type {Metadata} from "next";
+
+import "./globals.css";
 
 const raleway = Raleway({
 	subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
 	title: "HyBit Media",
 	description: "Handcrafted Design",
 };

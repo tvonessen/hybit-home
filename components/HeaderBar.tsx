@@ -1,6 +1,6 @@
 "use client";
 
-import {List, X} from "@phosphor-icons/react/dist/ssr";
+import {ListIcon, XIcon} from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import React from "react";
 import DarkModeButton from "./DarkModeButton";
@@ -81,13 +81,13 @@ const HeaderBar = () => {
 						variant="ghost"
 						isIconOnly
 					>
-						<List
+						<ListIcon
 							size={32}
 							className={`${
 								isNavOpen ? "scale-y-0 opacity-0" : "scale-y-100 opacity-100 "
 							} absolute transition-[transform_opacity]`}
 						/>
-						<X
+						<XIcon
 							size={32}
 							className={`${
 								isNavOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"

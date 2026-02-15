@@ -1,7 +1,9 @@
 import type {NextConfig} from "next";
 
 export default {
-	output: "standalone", images: {
+	reactStrictMode: true,
+	output: "standalone",
+	images: {
 		remotePatterns: [
 			{
 				protocol: "https",

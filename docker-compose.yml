@@ -1,0 +1,13 @@
+services:
+  hybit:
+    build: .
+    image: hybit:latest
+    container_name: hybit
+    restart: unless-stopped
+    ports:
+      - "6602:6602"
+    env_file:
+      - .env
+    user: "1001:1001"
+    volumes:
+      - ./public:/app/public
