@@ -2,9 +2,9 @@
 
 import React from "react";
 import Logo from "./Logo";
-import { CaretDown } from "@phosphor-icons/react";
-import { useRouter } from "next/navigation";
-import { Button } from "@heroui/react";
+import {CaretDown} from "@phosphor-icons/react";
+import {useRouter} from "next/navigation";
+import {Button} from "@heroui/react";
 
 export default function Jumbo() {
 	const logoRef = React.useRef<HTMLDivElement>(null);
@@ -49,19 +49,18 @@ export default function Jumbo() {
 	return (
 		<div
 			id="title-container"
-			className="sticky z-10 -top-[calc(100%_-_120px)] w-screen h-screen flex justify-end items-center bg-hatching overflow-hidden"
+			className="sticky z-10 -top-[calc(100%-120px)] w-full h-screen flex justify-end items-center bg-hatching overflow-hidden"
 		>
 			<div
-				className="relative bg-background md:rounded-l-3xl w-full md:w-4/6 h-[45vw] sm:h-[25vw] max-h-72 p-6 pb-2 flex flex-col items-start justify-start transition-all duration-700"
+				className="relative bg-background md:rounded-l-3xl w-full md:w-4/6 p-6 pb-2 flex flex-col items-start justify-start transition-all duration-700"
 				ref={logoRef}
 			>
 				<Logo
-					className="relative self-start"
-					width="auto"
-					height="auto"
+					className="relative self-start w-65 md:w-100 xl:w-122 h-auto"
 					border="var(--color-foreground)"
 				/>
-				<h1 className="bottom-2 w-full mt-2 flex flex-row justify-between text-[clamp(14pt,3vw,24pt)] font-medium origin-top-left">
+				<h1
+					className="bottom-2 w-full mt-2 flex flex-row justify-between text-[14pt] md:text-3xl xl:text-4xl font-medium origin-top-left">
 					HANDCRAFTED WEBDESIGN
 				</h1>
 			</div>

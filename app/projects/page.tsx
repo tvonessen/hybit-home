@@ -63,7 +63,7 @@ export default function Projects() {
 						src="/img/bernd-dittrich-E1eKa8PJHTU-unsplash.jpg"
 						alt="Projects image"
 						aria-hidden
-						className="w-full lg:w-5/6 mx-auto my-6 md:my-12 aspect-[21/10] md:aspect-[21/6] object-cover rounded-2xl !opacity-85 contrast-[0.9] -hue-rotate-[120deg]"
+						className="w-full lg:w-5/6 mx-auto my-6 md:my-12 aspect-21/10 md:aspect-21/6 object-cover rounded-2xl opacity-85! contrast-[0.9] -hue-rotate-120"
 					/>
 					<div className="max-w-3xl mx-auto">
 						<p className="mb-4 max-w-full mx-auto text-lg leading-loose">

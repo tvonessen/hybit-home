@@ -1,13 +1,13 @@
 "use client";
 
-import { List, X } from "@phosphor-icons/react/dist/ssr";
+import {List, X} from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import React from "react";
 import DarkModeButton from "./DarkModeButton";
 import Logo from "./Logo";
 import MainNav from "./navigation/MainNav";
-import { Button } from "@heroui/react";
-import { usePathname } from "next/navigation";
+import {Button} from "@heroui/react";
+import {usePathname} from "next/navigation";
 
 const HeaderBar = () => {
 	const [isNavOpen, setIsNavOpen] = React.useState(false);
@@ -26,6 +26,7 @@ const HeaderBar = () => {
 					logoRef.current.style.pointerEvents = "none";
 				}
 			}
+
 			handleScroll();
 			document.addEventListener("scroll", handleScroll);
 			return () => document.removeEventListener("scroll", handleScroll);
@@ -60,7 +61,7 @@ const HeaderBar = () => {
 			>
 				<Link
 					href="/"
-					className="h-full px-3 py-2 bg-background rounded-md"
+					className="h-full px-3 py-2 bg-transparent rounded-md"
 					ref={logoRef}
 					style={{
 						transition: "opacity 0.4s",
@@ -68,10 +69,11 @@ const HeaderBar = () => {
 						pointerEvents: pathname === "/" ? "none" : "auto",
 					}}
 				>
-					<Logo border="currentcolor" fill={isNavOpen ? "none" : undefined} />
+					<Logo border="currentcolor" fill={isNavOpen ? "none" : undefined}
+					      className="ms-4 h-14 w-auto"/>
 				</Link>
 				<div className="flex flex-row gap-3 items-center">
-					<DarkModeButton />
+					{!isNavOpen && <DarkModeButton/>}
 					<Button
 						className="w-14 h-14 bg-background border-0"
 						size="lg"
@@ -94,9 +96,9 @@ const HeaderBar = () => {
 					</Button>
 				</div>
 			</nav>
-			<MainNav isOpenState={[isNavOpen, toggleNav]} />
+			<MainNav isOpenState={[isNavOpen, toggleNav]}/>
 			{pathname === "/contact" && (
-				<div className="absolute w-full h-4 bg-hatching" aria-hidden />
+				<div className="absolute w-full h-4 bg-hatching" aria-hidden/>
 			)}
 		</header>
 	);

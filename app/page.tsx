@@ -1,22 +1,21 @@
 import Jumbo from "@/components/Jumbo";
 import NavButton from "@/components/navigation/NavButton";
 import {
-	GraduationCap,
-	HandWaving,
-	Heart,
-	Atom,
-	Flask,
-	Signpost,
-	Wall,
-	Star,
-	Speedometer,
-	Recycle,
-	Trophy,
-	HandPeace,
-	HandPointing,
-	ArrowSquareIn,
-	GithubLogo,
-	DiscoBall,
+	ArrowSquareInIcon,
+	AtomIcon,
+	FlaskIcon,
+	GithubLogoIcon,
+	GraduationCapIcon,
+	HandPeaceIcon,
+	HandPointingIcon,
+	HandWavingIcon,
+	HeartIcon,
+	RecycleIcon,
+	SignpostIcon,
+	SpeedometerIcon,
+	StarIcon,
+	TrophyIcon,
+	WallIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,7 +24,7 @@ import React from "react";
 export default function Home() {
 	return (
 		<>
-			<Jumbo />
+			<Jumbo/>
 			<section className="container mx-auto px-6 mt-12 pt-48 text-xl leading-relaxed">
 				<Image
 					alt="Portait of Tobias von Essen"
@@ -33,12 +32,12 @@ export default function Home() {
 					sizes="(min-width: 1280px) 480px, (min-width: 1024px) 360px, 280px"
 					width={480}
 					height={640}
-					className="w-[280px] sm:w-[280px] lg:w-[360px] aspect-square sm:aspect-auto object-cover rounded-xl sm:float-end  mx-auto sm:ms-8 mb-8"
+					className="w-70 sm:w-70 lg:w-90 aspect-square sm:aspect-auto object-cover rounded-xl sm:float-end  mx-auto sm:ms-8 mb-8"
 				/>
 
 				<h2 className="text-3xl font-medium mb-12">
 					Hey there!{" "}
-					<HandWaving
+					<HandWavingIcon
 						role="img"
 						aria-label="Waving hand"
 						weight="duotone"
@@ -48,7 +47,7 @@ export default function Home() {
 				<p className="mb-16">
 					I am <b>Tobias</b>, web developer and designer based in the Berlin
 					area, Germany. I{" "}
-					<Heart
+					<HeartIcon
 						role="img"
 						aria-label="Heart"
 						weight="fill"
@@ -58,14 +57,14 @@ export default function Home() {
 					websites.
 				</p>
 				<p className="mb-8">
-					<GraduationCap
+					<GraduationCapIcon
 						role="img"
 						aria-label="Graduation cap"
 						weight="light"
 						className="fill-secondary float-start text-6xl md:mx-3 me-2"
 					/>
 					Actually, I am a graduated R&D engineer{" "}
-					<Flask
+					<FlaskIcon
 						className="inline-block text-xl -mt-1 text-secondary"
 						aria-hidden="true"
 					/>
@@ -80,7 +79,7 @@ export default function Home() {
 					company and can follow my passion day by day. I have fallen in love
 					with <b className="text-blue-500 inline-block">TypeScript</b>,{" "}
 					<b className="text-secondary inline-block">
-						<Atom className="inline-block text-2xl -mt-1" aria-hidden="true" />
+						<AtomIcon className="inline-block text-2xl -mt-1" aria-hidden="true"/>
 						&nbsp;ReactJS
 					</b>{" "}
 					and <b>NextJS</b> and all the modern web technologies, frameworks and
@@ -93,36 +92,36 @@ export default function Home() {
 				<div className="container mx-auto px-6 text-xl leading-loose">
 					<p>
 						My key competences are{" "}
-						<Signpost
+						<SignpostIcon
 							aria-hidden="true"
 							weight="fill"
 							className="inline-block text-secondary text-2xl -mt-1"
 						/>{" "}
 						straightforward and{" "}
-						<Wall
+						<WallIcon
 							aria-hidden="true"
 							weight="fill"
 							className="inline-block text-primary text-2xl -mt-1"
 						/>{" "}
 						robust websites, that provide{" "}
-						<Star
+						<StarIcon
 							aria-hidden="true"
 							weight="bold"
 							className="inline-block text-yellow-500 text-2xl -mt-1"
 						/>{" "}
 						best user experience, run{" "}
-						<Speedometer
+						<SpeedometerIcon
 							className="inline-block text-primary text-2xl"
 							aria-hidden="true"
 						/>{" "}
 						smoothly and{" "}
-						<Recycle
+						<RecycleIcon
 							aria-hidden="true"
 							className="inline-block text-secondary text-2xl -mt-1"
 						/>{" "}
 						resource-efficient. I like drafting and designing websites from
 						scratch to create{" "}
-						<Trophy
+						<TrophyIcon
 							aria-hidden="true"
 							weight="duotone"
 							className="inline-block text-yellow-700 text-2xl -mt-1"
@@ -138,7 +137,7 @@ export default function Home() {
 							href="/projects"
 							className="inline font-semibold bg-primary px-2 py-1 mx-1 rounded-lg text-nowrap"
 						>
-							<ArrowSquareIn size={24} aria-hidden className="inline" />{" "}
+							<ArrowSquareInIcon size={24} aria-hidden className="inline"/>{" "}
 							portfolio
 						</Link>{" "}
 						or my{" "}
@@ -148,7 +147,7 @@ export default function Home() {
 							rel="noopener noreferrer"
 							className="inline font-semibold bg-secondary px-2 py-1 mx-1 rounded-lg text-nowrap"
 						>
-							<GithubLogo
+							<GithubLogoIcon
 								size={24}
 								role="img"
 								aria-label="Github Logo"
@@ -163,7 +162,7 @@ export default function Home() {
 
 			<section className="w-full py-16 bg-hatching">
 				<div className="container mx-auto px-6 py-4 text-xl leading-loose bg-background rounded-3xl">
-					<HandPeace
+					<HandPeaceIcon
 						weight="duotone"
 						className="text-4xl mx-auto text-primary my-6"
 					/>
@@ -182,7 +181,7 @@ export default function Home() {
 							className="font-semibold text-xl italic"
 							href="/contact"
 						>
-							<HandPointing
+							<HandPointingIcon
 								weight="duotone"
 								className="rotate-90 inline-block text-3xl"
 							/>{" "}

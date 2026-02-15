@@ -1,31 +1,34 @@
 {
-	"name": "hybit-home",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"dev": "next dev --turbo",
-		"build": "next build",
-		"start": "next start --port 6602",
-		"lint": "next lint"
-	},
-	"dependencies": {
-		"@biomejs/biome": "^2.4.0",
-		"@heroui/react": "^2.8.9",
-		"@phosphor-icons/react": "^2.1.10",
-		"autoprefixer": "^10.4.24",
-		"framer-motion": "^12.34.0",
-		"next": "16.1.6",
-		"next-recaptcha-v3": "^1.5.3",
-		"nodemailer": "7.0.11",
-		"react": "^19.2.4",
-		"react-dom": "^19.2.4",
-		"usehooks-ts": "^3.1.1"
-	},
-	"devDependencies": {
-		"@types/node": "^24.10.13",
-		"@types/react": "^19.2.14",
-		"postcss": "^8.5.6",
-		"tailwindcss": "^3.4.17",
-		"typescript": "^5.9.3"
-	}
+  "name": "hybit-home",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start --port 6602",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@biomejs/biome": "^2.4.0",
+    "@heroui/react": "^2.8.9",
+    "@phosphor-icons/react": "^2.1.10",
+    "framer-motion": "^12.34.0",
+    "next": "16.1.6",
+    "next-recaptcha-v3": "^1.5.3",
+    "nodemailer": "7.0.11",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "usehooks-ts": "^3.1.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/node": "^24.10.13",
+    "@types/react": "^19.2.14",
+    "tailwind-merge": "^3.4.1",
+    "clsx": "^2.1.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
+  }
 }

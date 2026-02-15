@@ -1,3 +1,14 @@
-import type { NextConfig } from "next";
+import type {NextConfig} from "next";
 
-export default {output: "standalone"} as NextConfig;
+export default {
+	output: "standalone", images: {
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "hybit.media",
+				port: "",
+				pathname: "/img/**"
+			}
+		]
+	}
+} as NextConfig;
