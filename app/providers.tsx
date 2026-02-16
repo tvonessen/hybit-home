@@ -1,10 +1,10 @@
 "use client";
 
-import { ColorProvider } from "@/utility/colorContext";
-import { HeroUIProvider } from "@heroui/react";
-import { ReCaptchaProvider } from "next-recaptcha-v3";
+import {ColorProvider} from "@/utility/colorContext";
+import {HeroUIProvider} from "@heroui/system";
+import {ReCaptchaProvider} from "next-recaptcha-v3";
 
-export function Providers({ children }) {
+export function Providers({children}) {
 	return (
 		<ReCaptchaProvider
 			reCaptchaKey={process.env.NEXT_PUBLIC_CAPTCHA_PUBLIC_KEY}

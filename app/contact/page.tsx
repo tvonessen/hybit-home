@@ -1,12 +1,12 @@
 import ContactForm from "@/components/ContactForm";
-import { ChatCircleDots } from "@phosphor-icons/react/dist/ssr";
+import {ChatCircleDotsIcon} from "@phosphor-icons/react/dist/ssr";
 import React from "react";
 
 export default function Contact() {
 	return (
 		<main className="container mx-auto px-6 mt-1 pt-56">
 			<h1 className="text-3xl mb-12">
-				<ChatCircleDots
+				<ChatCircleDotsIcon
 					size={50}
 					className="inline -mt-2 pe-2"
 					weight="duotone"
@@ -20,7 +20,7 @@ export default function Contact() {
 			</p>
 
 			<div className="container mx-auto mt-6">
-				<ContactForm />
+				<ContactForm/>
 			</div>
 		</main>
 	);

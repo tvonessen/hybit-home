@@ -1,15 +1,15 @@
 "use client";
 
 import Project from "@/components/Project";
-import { ColorContext } from "@/utility/colorContext";
+import {ColorContext} from "@/utility/colorContext";
 import React from "react";
-import { projects } from "./projects";
+import {projects} from "./projects";
 import Link from "next/link";
-import { CaretDown } from "@phosphor-icons/react";
-import { Image } from "@heroui/react";
+import {CaretDownIcon} from "@phosphor-icons/react";
+import {Image} from "@heroui/image";
 
 export default function Projects() {
-	const { setColors, resetColors } = React.useContext(ColorContext);
+	const {setColors, resetColors} = React.useContext(ColorContext);
 
 	const handleScroll = React.useCallback(() => {
 		let foundOne = false;
@@ -52,7 +52,8 @@ export default function Projects() {
 
 	return (
 		<main className="w-full mx-auto px-6 mt-1 py-36 bg-hatching-color">
-			<div className="bg-[color-mix(in_srgb,var(--color-background)_70%,transparent)] w-auto max-w-7xl  mx-auto p-4 rounded-3xl">
+			<div
+				className="bg-[color-mix(in_srgb,var(--color-background)_70%,transparent)] w-auto max-w-7xl  mx-auto p-4 rounded-3xl">
 				<div className="min-h-[75vh] mx-auto flex flex-col justify-between">
 					<div className="max-w-3xl mx-auto">
 						<h1 className="w-full max-w-full mx-auto mt-16 text-3xl font-semibold">
@@ -89,9 +90,9 @@ export default function Projects() {
 						</p>
 					</div>
 					<div className="text-center md:text-lg mt-24">
-						<CaretDown size={32} className="mx-auto inline-block -mt-1" />
+						<CaretDownIcon size={32} className="mx-auto inline-block -mt-1"/>
 						<p className="inline-block px-4">To the projects</p>
-						<CaretDown size={32} className="mx-auto inline-block -mt-1" />
+						<CaretDownIcon size={32} className="mx-auto inline-block -mt-1"/>
 					</div>
 				</div>
 

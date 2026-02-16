@@ -6,7 +6,7 @@ import React from "react";
 import DarkModeButton from "./DarkModeButton";
 import Logo from "./Logo";
 import MainNav from "./navigation/MainNav";
-import {Button} from "@heroui/react";
+import {Button} from "@heroui/button";
 import {usePathname} from "next/navigation";
 
 const HeaderBar = () => {

@@ -2,9 +2,9 @@
 
 import React from "react";
 import Logo from "./Logo";
-import {CaretDown} from "@phosphor-icons/react";
+import {CaretDownIcon} from "@phosphor-icons/react";
 import {useRouter} from "next/navigation";
-import {Button} from "@heroui/react";
+import {Button} from "@heroui/button";
 
 export default function Jumbo() {
 	const logoRef = React.useRef<HTMLDivElement>(null);
@@ -70,7 +70,7 @@ export default function Jumbo() {
 				onPress={() => router.push("/")}
 				isIconOnly
 			>
-				<CaretDown
+				<CaretDownIcon
 					size={48}
 					weight="thin"
 					className="opacity-90 animate-bounce mt-2"

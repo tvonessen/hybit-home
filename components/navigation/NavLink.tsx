@@ -1,4 +1,4 @@
-import {CaretLeft, CaretRight} from "@phosphor-icons/react/dist/ssr";
+import {CaretLeftIcon, CaretRightIcon} from "@phosphor-icons/react/dist/ssr";
 import React from "react";
 import {cn} from "@/utility/utils";
 
@@ -24,11 +24,11 @@ const NavLink = React.memo(({className, children, onClick}: NavLinkProps) => {
 			<div className="transition-[filter] flex flex-row gap-2">{children}</div>
 			<div
 				className="opacity-0 select-none flex absolute h-full flex-row justify-center items-center top-0 -left-12 group-hover:opacity-100 group-focus-visible:opacity-100 group-hover:duration-500 duration-200">
-				<CaretRight/>
+				<CaretRightIcon/>
 			</div>
 			<div
 				className="opacity-0 select-none flex absolute h-full flex-row justify-center items-center top-0 -right-12 group-hover:opacity-100 group-focus-visible:opacity-100 group-hover:duration-500 duration-200">
-				<CaretLeft/>
+				<CaretLeftIcon/>
 			</div>
 		</button>
 	);

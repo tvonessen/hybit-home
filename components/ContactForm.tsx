@@ -1,14 +1,11 @@
 "use client";
 
-import { Button, Checkbox, Form, Input, Textarea } from "@heroui/react";
-import {
-	HandPeace,
-	Key,
-	PaperPlaneRight,
-	SmileySad,
-	Warning,
-} from "@phosphor-icons/react";
-import { useReCaptcha } from "next-recaptcha-v3";
+import {Checkbox} from "@heroui/checkbox";
+import {Button} from "@heroui/button";
+import {Input, Textarea} from "@heroui/input";
+import {Form} from "@heroui/form";
+import {HandPeaceIcon, PaperPlaneRightIcon, SmileySadIcon,} from "@phosphor-icons/react";
+import {useReCaptcha} from "next-recaptcha-v3";
 import React from "react";
 
 export default function ContactForm() {
@@ -16,7 +13,7 @@ export default function ContactForm() {
 		null | "pending" | "success" | "error"
 	>(null);
 
-	const { executeRecaptcha } = useReCaptcha();
+	const {executeRecaptcha} = useReCaptcha();
 
 	async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
 		event.preventDefault();
@@ -122,15 +119,15 @@ export default function ContactForm() {
 					"Sending..."
 				) : formState === "success" ? (
 					<>
-						<HandPeace size={28} /> I'll be in touch!
+						<HandPeaceIcon size={28}/> I'll be in touch!
 					</>
 				) : formState === "error" ? (
 					<>
-						<SmileySad size={24} /> Something went wrong. Try again?
+						<SmileySadIcon size={24}/> Something went wrong. Try again?
 					</>
 				) : (
 					<>
-						Reach out <PaperPlaneRight size={24} weight="light" />
+						Reach out <PaperPlaneRightIcon size={24} weight="light"/>
 					</>
 				)}
 			</Button>

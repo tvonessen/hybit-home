@@ -1,4 +1,4 @@
-import {EnvelopeSimple, FolderSimple, HouseSimple,} from "@phosphor-icons/react/dist/ssr";
+import {EnvelopeSimpleIcon, FolderSimpleIcon, HouseSimpleIcon,} from "@phosphor-icons/react/dist/ssr";
 import {useRouter} from "next/navigation";
 import React from "react";
 import NavLink from "./NavLink";
@@ -40,19 +40,19 @@ const MainNav = ({isOpenState}) => {
 			</h2>
 			<div className="flex flex-col w-fit justify-center items-start gap-10 ps-4">
 				<NavLink className={`${transform}`} onClick={() => handleNavigate("/")}>
-					<HouseSimple/> Home
+					<HouseSimpleIcon/> Home
 				</NavLink>
 				<NavLink
 					className={`${transform}`}
 					onClick={() => handleNavigate("projects")}
 				>
-					<FolderSimple/> Projects
+					<FolderSimpleIcon/> Projects
 				</NavLink>
 				<NavLink
 					className={`${transform}`}
 					onClick={() => handleNavigate("contact")}
 				>
-					<EnvelopeSimple/> Contact
+					<EnvelopeSimpleIcon/> Contact
 				</NavLink>
 			</div>
 		</div>
