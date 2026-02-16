@@ -11,6 +11,7 @@ interface ProjectProps extends React.HTMLAttributes<HTMLDivElement> {
 	title: string;
 	description: string | React.ReactElement;
 	link: { href: string; text?: string };
+	colors: { primary: string; secondary: string };
 }
 
 export default function Project({
@@ -18,6 +19,7 @@ export default function Project({
 	                                title,
 	                                description,
 	                                link,
+	                                colors,
 	                                ...props
                                 }: ProjectProps) {
 	return (
@@ -47,8 +49,8 @@ export default function Project({
 						target="_blank"
 						rel="noreferrer"
 						showAnchorIcon
-						color="primary"
 						className="text-lg"
+						style={{backgroundColor: colors.primary}}
 					>
 						{link.text ??
 							link.href.replace("https://", "").replace("http://", "")}

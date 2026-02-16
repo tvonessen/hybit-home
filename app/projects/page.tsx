@@ -103,6 +103,7 @@ export default function Projects() {
 						title={project.title}
 						image={project.image}
 						description={project.description}
+						colors={project.colors}
 						link={project.link}
 						className="opacity-30 saturate-0"
 					/>

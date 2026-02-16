@@ -1,5 +1,22 @@
 export const projects = [
 	{
+		title: "SG Glienick e.V.",
+		image: "/img/sg-glienick.png",
+		description: (
+			<>
+				<p className="text-lg leading-loose my-2">
+					The website of our local sports club. I live in a small village and it is my pleasure to be "that one guy the
+					speaks computer".
+				</p>
+				<p className="text-lg leading-loose my-2 italic">
+					Welcome to the stadium "Willi Lau", home of the SG Glienick e.V.!
+				</p>
+			</>
+		),
+		link: {href: "https://sg-glienick.de", text: "sg-glienick.de"},
+		colors: {secondary: "#fff700", primary: "#09507b"},
+	},
+	{
 		title: "IAMovie",
 		image: "/img/triathlon.jpg",
 		description: (
@@ -13,8 +30,8 @@ export const projects = [
 				</p>
 			</>
 		),
-		link: { href: "https://iamovie.de", text: "iamovie.de" },
-		colors: { primary: "#FC1A4B", secondary: "#06359D" },
+		link: {href: "https://iamovie.de", text: "iamovie.de"},
+		colors: {primary: "#FC1A4B", secondary: "#06359D"},
 	},
 	{
 		title: "Inlinetest",
@@ -35,8 +52,8 @@ export const projects = [
 				</p>
 			</>
 		),
-		link: { href: "https://inlinetest.eu", text: "inlinetest.eu" },
-		colors: { primary: "#07006E", secondary: "#F1690A" },
+		link: {href: "https://inlinetest.eu", text: "inlinetest.eu"},
+		colors: {primary: "#07006E", secondary: "#F1690A"},
 	},
 	{
 		title: "Jointlab Berlin",
@@ -53,8 +70,8 @@ export const projects = [
 				</p>
 			</>
 		),
-		link: { href: "https://jointlab-berlin.com", text: "jointlab-berlin.com" },
-		colors: { primary: "#FA4B38", secondary: "#FA4B38" },
+		link: {href: "https://jointlab-berlin.com", text: "jointlab-berlin.com"},
+		colors: {primary: "#FA4B38", secondary: "#FA4B38"},
 	},
 	{
 		title: "Nanotest",
@@ -72,8 +89,8 @@ export const projects = [
 				</p>
 			</>
 		),
-		link: { href: "https://nanotest.eu", text: "nanotest.eu" },
-		colors: { primary: "#2C8735", secondary: "#83B95F" },
+		link: {href: "https://nanotest.eu", text: "nanotest.eu"},
+		colors: {primary: "#2C8735", secondary: "#83B95F"},
 	},
 	{
 		title: "subcity",
@@ -93,7 +110,7 @@ export const projects = [
 				</p>
 			</>
 		),
-		link: { href: "http://subcity-music.de/", text: "subcity-music.de" },
-		colors: { primary: "#ff33cc", secondary: "#BAFC22" },
+		link: {href: "http://subcity-music.de/", text: "subcity-music.de"},
+		colors: {primary: "#ff33cc", secondary: "#BAFC22"},
 	},
 ];
