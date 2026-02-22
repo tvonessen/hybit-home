@@ -9,7 +9,10 @@ export default function useThemeColors() {
 	function setColors({
 		primary,
 		secondary,
-	}: { primary?: string; secondary?: string }) {
+	}: {
+		primary?: string;
+		secondary?: string;
+	}) {
 		if (primary) {
 			setPrimary(primary);
 			document.documentElement.style.setProperty("--color-primary", primary);

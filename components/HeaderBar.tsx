@@ -1,13 +1,13 @@
 "use client";
 
-import {ListIcon, XIcon} from "@phosphor-icons/react/dist/ssr";
+import { Button } from "@heroui/button";
+import { ListIcon, XIcon } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 import DarkModeButton from "./DarkModeButton";
 import Logo from "./Logo";
 import MainNav from "./navigation/MainNav";
-import {Button} from "@heroui/button";
-import {usePathname} from "next/navigation";
 
 const HeaderBar = () => {
 	const [isNavOpen, setIsNavOpen] = React.useState(false);
@@ -69,26 +69,33 @@ const HeaderBar = () => {
 						pointerEvents: pathname === "/" ? "none" : "auto",
 					}}
 				>
-					<Logo border="currentcolor" fill={isNavOpen ? "none" : undefined}
-					      className="ms-4 h-14 w-auto"/>
+					<Logo
+						border="currentcolor"
+						fill={isNavOpen ? "none" : undefined}
+						className="ms-4 h-14 w-auto"
+					/>
 				</Link>
 				<div className="flex flex-row gap-3 items-center">
-					{!isNavOpen && <DarkModeButton/>}
+					{!isNavOpen && <DarkModeButton />}
 					<Button
 						className="w-14 h-14 bg-background border-0"
 						size="lg"
 						onPress={toggleNav}
 						variant="ghost"
 						isIconOnly
+						aria-label={isNavOpen ? "Close navigation" : "Open navigation"}
+						aria-expanded={!!isNavOpen}
 					>
 						<ListIcon
 							size={32}
+							aria-hidden
 							className={`${
 								isNavOpen ? "scale-y-0 opacity-0" : "scale-y-100 opacity-100 "
 							} absolute transition-[transform_opacity]`}
 						/>
 						<XIcon
 							size={32}
+							aria-hidden
 							className={`${
 								isNavOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
 							} absolute transition-[transform_opacity]`}
@@ -96,9 +103,9 @@ const HeaderBar = () => {
 					</Button>
 				</div>
 			</nav>
-			<MainNav isOpenState={[isNavOpen, toggleNav]}/>
+			<MainNav isOpenState={[isNavOpen, toggleNav]} />
 			{pathname === "/contact" && (
-				<div className="absolute w-full h-4 bg-hatching" aria-hidden/>
+				<div className="absolute w-full h-4 bg-hatching" aria-hidden />
 			)}
 		</header>
 	);

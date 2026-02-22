@@ -1,5 +1,3 @@
-import Jumbo from "@/components/Jumbo";
-import NavButton from "@/components/navigation/NavButton";
 import {
 	ArrowSquareInIcon,
 	AtomIcon,
@@ -19,12 +17,13 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import Jumbo from "@/components/Jumbo";
+import NavButton from "@/components/navigation/NavButton";
 
 export default function Home() {
 	return (
 		<>
-			<Jumbo/>
+			<Jumbo />
 			<section className="container mx-auto px-6 mt-12 pt-48 text-xl leading-relaxed">
 				<Image
 					alt="Portait of Tobias von Essen"
@@ -79,7 +78,10 @@ export default function Home() {
 					company and can follow my passion day by day. I have fallen in love
 					with <b className="text-blue-500 inline-block">TypeScript</b>,{" "}
 					<b className="text-secondary inline-block">
-						<AtomIcon className="inline-block text-2xl -mt-1" aria-hidden="true"/>
+						<AtomIcon
+							className="inline-block text-2xl -mt-1"
+							aria-hidden="true"
+						/>
 						&nbsp;ReactJS
 					</b>{" "}
 					and <b>NextJS</b> and all the modern web technologies, frameworks and
@@ -137,7 +139,7 @@ export default function Home() {
 							href="/projects"
 							className="inline font-semibold bg-primary px-2 py-1 mx-1 rounded-lg text-nowrap"
 						>
-							<ArrowSquareInIcon size={24} aria-hidden className="inline"/>{" "}
+							<ArrowSquareInIcon size={24} aria-hidden className="inline" />{" "}
 							portfolio
 						</Link>{" "}
 						or my{" "}

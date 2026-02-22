@@ -1,4 +1,4 @@
-import {heroui} from "@heroui/theme";
+import { heroui } from "@heroui/theme";
 
 export default heroui({
 	themes: {
@@ -8,7 +8,7 @@ export default heroui({
 				background: "#f0f8f8",
 				primary: "#ff6649",
 				secondary: "#099",
-			}
+			},
 		},
 		dark: {
 			colors: {
@@ -16,7 +16,7 @@ export default heroui({
 				background: "#09090a",
 				primary: "#ff6649",
 				secondary: "#099",
-			}
-		}
+			},
+		},
 	},
 });

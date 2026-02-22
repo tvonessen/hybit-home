@@ -1,11 +1,15 @@
 "use client";
 
-import {Checkbox} from "@heroui/checkbox";
-import {Button} from "@heroui/button";
-import {Input, Textarea} from "@heroui/input";
-import {Form} from "@heroui/form";
-import {HandPeaceIcon, PaperPlaneRightIcon, SmileySadIcon,} from "@phosphor-icons/react";
-import {useReCaptcha} from "next-recaptcha-v3";
+import { Button } from "@heroui/button";
+import { Checkbox } from "@heroui/checkbox";
+import { Form } from "@heroui/form";
+import { Input, Textarea } from "@heroui/input";
+import {
+	HandPeaceIcon,
+	PaperPlaneRightIcon,
+	SmileySadIcon,
+} from "@phosphor-icons/react";
+import { useReCaptcha } from "next-recaptcha-v3";
 import React from "react";
 
 export default function ContactForm() {
@@ -13,7 +17,7 @@ export default function ContactForm() {
 		null | "pending" | "success" | "error"
 	>(null);
 
-	const {executeRecaptcha} = useReCaptcha();
+	const { executeRecaptcha } = useReCaptcha();
 
 	async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
 		event.preventDefault();
@@ -119,19 +123,19 @@ export default function ContactForm() {
 					"Sending..."
 				) : formState === "success" ? (
 					<>
-						<HandPeaceIcon size={28}/> I'll be in touch!
+						<HandPeaceIcon size={28} /> I'll be in touch!
 					</>
 				) : formState === "error" ? (
 					<>
-						<SmileySadIcon size={24}/> Something went wrong. Try again?
+						<SmileySadIcon size={24} /> Something went wrong. Try again?
 					</>
 				) : (
 					<>
-						Reach out <PaperPlaneRightIcon size={24} weight="light"/>
+						Reach out <PaperPlaneRightIcon size={24} weight="light" />
 					</>
 				)}
 			</Button>
-			<center className="text-secondary md:col-span-2 text-xs -mt-2">
+			<p className="text-center text-secondary md:col-span-2 text-xs -mt-2">
 				This site is protected by reCAPTCHA and the{" "}
 				<a className="underline" href="https://policies.google.com/privacy">
 					Privacy Policy
@@ -141,7 +145,7 @@ export default function ContactForm() {
 					Terms of Service
 				</a>{" "}
 				apply.
-			</center>
+			</p>
 		</Form>
 	);
 }

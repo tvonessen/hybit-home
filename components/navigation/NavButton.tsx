@@ -1,7 +1,7 @@
 "use client";
-import {useRouter} from "next/navigation";
-import {Button, type ButtonProps} from "@heroui/button";
-import type {ReactNode} from "react";
+import { Button, type ButtonProps } from "@heroui/button";
+import { useRouter } from "next/navigation";
+import type { ReactNode } from "react";
 
 interface NavButtonProps extends ButtonProps {
 	children: ReactNode;

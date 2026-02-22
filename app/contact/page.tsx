@@ -1,6 +1,5 @@
+import { ChatCircleDotsIcon } from "@phosphor-icons/react/dist/ssr";
 import ContactForm from "@/components/ContactForm";
-import {ChatCircleDotsIcon} from "@phosphor-icons/react/dist/ssr";
-import React from "react";
 
 export default function Contact() {
 	return (
@@ -20,7 +19,7 @@ export default function Contact() {
 			</p>
 
 			<div className="container mx-auto mt-6">
-				<ContactForm/>
+				<ContactForm />
 			</div>
 		</main>
 	);

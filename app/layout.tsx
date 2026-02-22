@@ -1,9 +1,8 @@
-import React from "react";
-import HeaderBar from "@/components/HeaderBar";
-import {Raleway} from "next/font/google";
-import {Providers} from "./providers";
+import type { Metadata } from "next";
+import { Raleway } from "next/font/google";
 import Footer from "@/components/Footer";
-import type {Metadata} from "next";
+import HeaderBar from "@/components/HeaderBar";
+import { Providers } from "./providers";
 
 import "./globals.css";
 
@@ -16,24 +15,24 @@ export const metadata: Metadata = {
 	description: "Handcrafted Design",
 };
 
-export default function RootLayout({children}) {
+export default function RootLayout({ children }) {
 	return (
 		<html lang="en" className="scroll-smooth!" suppressHydrationWarning>
-		<body
-			className={`${raleway.className} transition-colors duration-150 w-full min-h-screen`}
-		>
-		<div/>
-		<Providers>
-			<HeaderBar/>
-			<div
-				id="main-content"
-				className="relative z-10 w-full min-h-screen transition-[color,background-image,filter,opacity] duration-500 flex flex-col justify-between"
+			<body
+				className={`${raleway.className} transition-colors duration-150 w-full min-h-screen`}
 			>
-				<div className="main-content-inner">{children}</div>
-				<Footer/>
-			</div>
-		</Providers>
-		</body>
+				<div />
+				<Providers>
+					<HeaderBar />
+					<div
+						id="main-content"
+						className="relative z-10 w-full min-h-screen transition-[color,background-image,filter,opacity] duration-500 flex flex-col justify-between"
+					>
+						<div className="main-content-inner">{children}</div>
+						<Footer />
+					</div>
+				</Providers>
+			</body>
 		</html>
 	);
 }

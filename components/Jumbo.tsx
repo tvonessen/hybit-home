@@ -1,10 +1,10 @@
 "use client";
 
+import { Button } from "@heroui/button";
+import { CaretDownIcon } from "@phosphor-icons/react";
+import { useRouter } from "next/navigation";
 import React from "react";
 import Logo from "./Logo";
-import {CaretDownIcon} from "@phosphor-icons/react";
-import {useRouter} from "next/navigation";
-import {Button} from "@heroui/button";
 
 export default function Jumbo() {
 	const logoRef = React.useRef<HTMLDivElement>(null);
@@ -59,8 +59,7 @@ export default function Jumbo() {
 					className="relative self-start w-65 md:w-100 xl:w-122 h-auto"
 					border="var(--color-foreground)"
 				/>
-				<h1
-					className="bottom-2 w-full mt-2 flex flex-row justify-between text-[14pt] md:text-3xl xl:text-4xl font-medium origin-top-left">
+				<h1 className="bottom-2 w-full mt-2 flex flex-row justify-between text-[14pt] md:text-3xl xl:text-4xl font-medium origin-top-left">
 					HANDCRAFTED WEBDESIGN
 				</h1>
 			</div>
@@ -69,10 +68,12 @@ export default function Jumbo() {
 				ref={caretRef}
 				onPress={() => router.push("/")}
 				isIconOnly
+				aria-label="Scroll down"
 			>
 				<CaretDownIcon
 					size={48}
 					weight="thin"
+					aria-hidden
 					className="opacity-90 animate-bounce mt-2"
 				/>
 			</Button>
