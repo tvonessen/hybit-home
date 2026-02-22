@@ -1,118 +1,120 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-@plugin './hero.ts';
+@plugin "./hero.ts";
 
-@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx,css,scss}';
+@source "../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx,css,scss}";
 @custom-variant dark (&:is(.dark *));
 
 @layer base {
-    :root {
-        --color-foreground: #09090a;
-        --color-background: #f0f8f8;
-        --color-primary: #ff6649;
-        --color-secondary: #099;
-    }
+	:root {
+		--color-foreground: #09090a;
+		--color-background: #f0f8f8;
+		--color-primary: #ff6649;
+		--color-secondary: #099;
+	}
 
-    /* Dark mode variables */
-    .dark {
-        --color-foreground: #f0f8f8;
-        --color-background: #09090a;
-    }
+	/* Dark mode variables */
+	.dark {
+		--color-foreground: #f0f8f8;
+		--color-background: #09090a;
+	}
 
-    *,
-    ::after,
-    ::before,
-    ::backdrop,
-    ::file-selector-button {
-        border-color: var(--color-gray-200, currentcolor);
-    }
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
+	}
 }
 
 @utility bg-hatching {
-    background-image: repeating-linear-gradient(
-            -45deg,
-            color-mix(in srgb, var(--color-foreground) 20%, transparent) 0,
-            color-mix(in srgb, var(--color-foreground) 20%, transparent) 1px,
-            transparent 0,
-            transparent 50%
-    );
-    background-size: 24px 24px;
+	background-image: repeating-linear-gradient(
+		-45deg,
+		color-mix(in srgb, var(--color-foreground) 20%, transparent) 0,
+		color-mix(in srgb, var(--color-foreground) 20%, transparent) 1px,
+		transparent 0,
+		transparent 50%
+	);
+	background-size: 24px 24px;
 }
 
 @utility bg-hatching-color {
-    position: relative;
+	position: relative;
 
-    &::before {
-        position: absolute;
-        opacity: 40%;
-        inset: 0;
-        z-index: -1;
-        content: '';
-        background-image: linear-gradient(
-                90deg,
-                var(--color-primary),
-                var(--color-secondary)
-        );
-        background-size: cover;
-        background-clip: border-box;
-        mask-image: repeating-linear-gradient(
-                -45deg,
-                light-dark(white, transparent) 0,
-                light-dark(white, transparent) 2px,
-                light-dark(transparent, white) 0,
-                light-dark(transparent, white) 50%
-        );
-        mask-size: 24px 24px;
-        transition: background-image 1s !important;
-    }
+	&::before {
+		position: absolute;
+		opacity: 40%;
+		inset: 0;
+		z-index: -1;
+		content: "";
+		background-image: linear-gradient(
+			90deg,
+			var(--color-primary),
+			var(--color-secondary)
+		);
+		background-size: cover;
+		background-clip: border-box;
+		mask-image: repeating-linear-gradient(
+			-45deg,
+			light-dark(white, transparent) 0,
+			light-dark(white, transparent) 2px,
+			light-dark(transparent, white) 0,
+			light-dark(transparent, white) 50%
+		);
+		mask-size: 24px 24px;
+		transition: background-image 1s;
+	}
 }
 
 @utility shadow-split {
-    color: var(--color-background);
-    box-shadow: 7px 7px var(--color-primary),
-    inset 7px 7px var(--color-secondary);
-    background-color: color-mix(
-            in srgb,
-            var(--color-foreground) 70%,
-            transparent
-    );
+	color: var(--color-background);
+	box-shadow:
+		7px 7px var(--color-primary),
+		inset 7px 7px var(--color-secondary);
+	background-color: color-mix(
+		in srgb,
+		var(--color-foreground) 70%,
+		transparent
+	);
 }
 
 @layer utilities {
-    :root {
-        --color-foreground: #09090a;
-        --color-background: #f0f8f8;
-        --color-primary: #ff6649;
-        --color-secondary: #099;
+	:root {
+		--color-foreground: #09090a;
+		--color-background: #f0f8f8;
+		--color-primary: #ff6649;
+		--color-secondary: #099;
 
-        color: var(--color-foreground);
-        background: var(--color-background);
-        transition: color 300ms,
-        background-color 300ms,
-        background-image 300ms;
+		color: var(--color-foreground);
+		background: var(--color-background);
+		transition:
+			color 300ms,
+			background-color 300ms,
+			background-image 300ms;
 
-        p {
-            max-width: 75ch;
-            text-wrap: pretty;
-        }
+		p {
+			max-width: 75ch;
+			text-wrap: pretty;
+		}
 
-        .grecaptcha-badge {
-            display: none;
-        }
-    }
+		.grecaptcha-badge {
+			display: none;
+		}
+	}
 
-    :root:has(body.dark) {
-        --color-foreground: #f0f8f8;
-        --color-background: #09090a;
-    }
+	:root:has(body.dark) {
+		--color-foreground: #f0f8f8;
+		--color-background: #09090a;
+	}
 
-    button {
-        @apply hover:cursor-pointer;
-    }
+	button {
+		@apply hover:cursor-pointer;
+	}
 }
 
 @layer utilities {
-    text-balance {
-        text-wrap: balance;
-    }
+	text-balance {
+		text-wrap: balance;
+	}
 }

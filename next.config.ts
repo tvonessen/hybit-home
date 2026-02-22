@@ -1,4 +1,4 @@
-import type {NextConfig} from "next";
+import type { NextConfig } from "next";
 
 export default {
 	reactStrictMode: true,
@@ -9,8 +9,8 @@ export default {
 				protocol: "https",
 				hostname: "hybit.media",
 				port: "",
-				pathname: "/img/**"
-			}
-		]
-	}
+				pathname: "/img/**",
+			},
+		],
+	},
 } as NextConfig;

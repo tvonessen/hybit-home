@@ -1,43 +1,43 @@
 {
-  "name": "hybit-home",
-  "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "next dev --turbo",
-    "build": "next build",
-    "start": "next start --port 6602",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@biomejs/biome": "^2.4.0",
-    "@heroui/button": "^2.2.31",
-    "@heroui/checkbox": "^2.3.31",
-    "@heroui/dropdown": "^2.3.31",
-    "@heroui/form": "^2.1.31",
-    "@heroui/image": "^2.2.19",
-    "@heroui/input": "^2.4.32",
-    "@heroui/link": "^2.2.25",
-    "@heroui/system": "^2.4.27",
-    "@heroui/theme": "^2.4.26",
-    "@phosphor-icons/react": "^2.1.10",
-    "@tailwindcss/postcss": "^4.1.18",
-    "autoprefixer": "^10.4.24",
-    "clsx": "^2.1.1",
-    "framer-motion": "12.34.0",
-    "next": "16.1.6",
-    "next-recaptcha-v3": "^1.5.3",
-    "nodemailer": "7.0.11",
-    "postcss": "^8.5.6",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "tailwind-merge": "^3.4.1",
-    "tailwindcss": "4.1.18",
-    "usehooks-ts": "^3.1.1"
-  },
-  "devDependencies": {
-    "@types/node": "^24.10.13",
-    "@types/react": "^19.2.14",
-    "typescript": "^5.9.3"
-  }
+	"name": "hybit-home",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "next dev --turbo",
+		"build": "next build",
+		"start": "next start --port 6602",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@biomejs/biome": "^2.4.4",
+		"@heroui/button": "^2.2.31",
+		"@heroui/checkbox": "^2.3.31",
+		"@heroui/dropdown": "^2.3.31",
+		"@heroui/form": "^2.1.31",
+		"@heroui/image": "^2.2.19",
+		"@heroui/input": "^2.4.32",
+		"@heroui/link": "^2.2.25",
+		"@heroui/system": "^2.4.27",
+		"@heroui/theme": "^2.4.26",
+		"@phosphor-icons/react": "^2.1.10",
+		"@tailwindcss/postcss": "^4.2.0",
+		"autoprefixer": "^10.4.24",
+		"clsx": "^2.1.1",
+		"framer-motion": "12.34.3",
+		"next": "16.1.6",
+		"next-recaptcha-v3": "^1.5.3",
+		"nodemailer": "8.0.1",
+		"postcss": "^8.5.6",
+		"react": "19.2.4",
+		"react-dom": "19.2.4",
+		"tailwind-merge": "^3.5.0",
+		"tailwindcss": "4.2.0",
+		"usehooks-ts": "^3.1.1"
+	},
+	"devDependencies": {
+		"@types/node": "^24.10.13",
+		"@types/react": "^19.2.14",
+		"typescript": "^5.9.3"
+	}
 }
