@@ -116,7 +116,7 @@ export default function ContactForm() {
 							? "danger"
 							: "secondary"
 				}
-				isDisabled={["success", "pending"].includes(formState)}
+				isDisabled={formState === "success" || formState === "pending"}
 				isLoading={formState === "pending"}
 			>
 				{formState === "pending" ? (

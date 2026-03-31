@@ -6,7 +6,11 @@ import {
 import { useRouter } from "next/navigation";
 import NavLink from "./NavLink";
 
-const MainNav = ({ isOpenState }) => {
+interface MainNavProps {
+	isOpenState: [boolean | null, (state?: boolean | null) => void];
+}
+
+const MainNav = ({ isOpenState }: MainNavProps) => {
 	const [isOpen, toggleState] = isOpenState;
 	const router = useRouter();
 	const transform = "skew-x-6 -skew-y-12 rotate-6";

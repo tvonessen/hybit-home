@@ -10,7 +10,7 @@ import Logo from "./Logo";
 import MainNav from "./navigation/MainNav";
 
 const HeaderBar = () => {
-	const [isNavOpen, setIsNavOpen] = React.useState(false);
+	const [isNavOpen, setIsNavOpen] = React.useState<boolean | null>(false);
 	const logoRef = React.useRef<HTMLAnchorElement>(null);
 
 	const pathname = usePathname();
@@ -18,6 +18,7 @@ const HeaderBar = () => {
 	React.useLayoutEffect(() => {
 		if (pathname === "/") {
 			function handleScroll() {
+				if (!logoRef.current) return;
 				if (window.scrollY > window.innerHeight / 2) {
 					logoRef.current.style.opacity = "100%";
 					logoRef.current.style.pointerEvents = "auto";
@@ -33,7 +34,7 @@ const HeaderBar = () => {
 		}
 	}, [pathname]);
 
-	const toggleNav = (state) => {
+	const toggleNav = (state?: boolean | null): void => {
 		const targetState =
 			typeof state === "boolean" || state === null ? state : !isNavOpen;
 		const backdrop = document.getElementById("main-content");
@@ -80,7 +81,7 @@ const HeaderBar = () => {
 					<Button
 						className="w-14 h-14 bg-background border-0"
 						size="lg"
-						onPress={toggleNav}
+						onPress={() => toggleNav()}
 						variant="ghost"
 						isIconOnly
 						aria-label={isNavOpen ? "Close navigation" : "Open navigation"}

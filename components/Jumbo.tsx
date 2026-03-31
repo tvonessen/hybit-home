@@ -13,8 +13,12 @@ export default function Jumbo() {
 
 	React.useLayoutEffect(() => {
 		const logo = logoRef.current;
+		const caret = caretRef.current;
+
+		if (!logo || !caret) return;
 
 		function handleScroll() {
+			if (!logo || !caret) return;
 			const isSticky = window.scrollY > window.innerHeight / 2;
 			const opacity =
 				window.innerHeight / 2 - logo.clientHeight / 2 - 0.9 * window.scrollY;
@@ -33,7 +37,7 @@ export default function Jumbo() {
 			for (const child of logo.children) {
 				(child as HTMLElement).style.opacity = `${opacity}%`;
 			}
-			caretRef.current.style.opacity = `${opacity}%`;
+			caret.style.opacity = `${opacity}%`;
 		}
 
 		handleScroll();

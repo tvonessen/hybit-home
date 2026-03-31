@@ -1,9 +1,10 @@
+import type { CSSProperties } from "react";
 import { cn } from "@/utility/utils";
 
 interface LogoProps {
 	fill?: string | string[];
 	border?: string;
-	style?: React.CSSProperties;
+	style?: CSSProperties;
 	className?: string;
 	height?: string;
 	width?: string;
@@ -15,16 +16,13 @@ const Logo = ({
 	border,
 	style,
 	className = "",
-	height,
-	width,
-	showText = false,
 }: LogoProps) => {
-	const getFill = (index = 0) => {
-		if (Array.isArray(fill)) return fill[index];
+	const getFill = (index = 0): string => {
+		if (Array.isArray(fill)) return fill[index] ?? "transparent";
 		if (fill === "none") return "transparent";
 		if (fill === "mono") return "#7f7f7f";
 		if (typeof fill === "string") return fill;
-		return ["var(--color-primary)", "var(--color-secondary)"][index];
+		return ["var(--color-primary)", "var(--color-secondary)"][index] ?? "transparent";
 	};
 
 	return (

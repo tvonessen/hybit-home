@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Raleway } from "next/font/google";
 import Footer from "@/components/Footer";
 import HeaderBar from "@/components/HeaderBar";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 	description: "Handcrafted Design",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="en" className="scroll-smooth!" suppressHydrationWarning>
 			<body

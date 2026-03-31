@@ -57,8 +57,10 @@ const AutoIcon = () => (
 	</svg>
 );
 
+type ThemeName = "auto" | "light" | "dark";
+
 const DarkModeButton = () => {
-	const [theme, setTheme] = useLocalStorage("theme", "auto");
+	const [theme, setTheme] = useLocalStorage<ThemeName>("theme", "auto");
 
 	const themes = React.useMemo(
 		() => ({
@@ -111,7 +113,10 @@ const DarkModeButton = () => {
 				variant="solid"
 				selectionMode="single"
 				onSelectionChange={(keys) => {
-					setTheme(keys.currentKey);
+					const selected = (keys as Set<string>).values().next();
+					if (!selected.done && selected.value) {
+						setTheme(selected.value as ThemeName);
+					}
 				}}
 			>
 				{Object.entries(themes).map(([key, value]) => (

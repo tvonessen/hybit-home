@@ -32,4 +32,6 @@ const NavLink = React.memo(({ className, children, onClick }: NavLinkProps) => {
 	);
 });
 
+NavLink.displayName = "NavLink";
+
 export default NavLink;

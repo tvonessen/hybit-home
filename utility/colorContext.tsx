@@ -1,17 +1,30 @@
+import type { ReactNode } from "react";
 import React from "react";
 
-export const ColorContext = React.createContext({
+interface ColorValues {
+	primary: string;
+	secondary: string;
+}
+
+interface ColorContextType {
+	primary: string;
+	secondary: string;
+	setColors: (colors: ColorValues) => void;
+	resetColors: () => void;
+}
+
+export const ColorContext = React.createContext<ColorContextType>({
 	primary: "",
 	secondary: "",
-	setColors: ({ primary, secondary }) => {},
+	setColors: (_colors: ColorValues) => {},
 	resetColors: () => {},
 });
 
-export const ColorProvider = ({ children }) => {
+export const ColorProvider = ({ children }: { children: ReactNode }) => {
 	const [primary, setPrimary] = React.useState("");
 	const [secondary, setSecondary] = React.useState("");
 
-	function setColors({ primary, secondary }) {
+	function setColors({ primary, secondary }: ColorValues): void {
 		setPrimary(primary ?? "#ff6649");
 		document.documentElement.style.setProperty(
 			"--color-primary",
@@ -24,7 +37,7 @@ export const ColorProvider = ({ children }) => {
 		);
 	}
 
-	function resetColors() {
+	function resetColors(): void {
 		setPrimary("#ff6649");
 		document.documentElement.style.setProperty("--color-primary", "#ff6649");
 		setSecondary("#009999");

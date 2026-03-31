@@ -3,6 +3,8 @@ import { Button, type ButtonProps } from "@heroui/button";
 import { useRouter } from "next/navigation";
 import type { ReactNode } from "react";
 
+type PressEvent = Parameters<NonNullable<ButtonProps["onPress"]>>[0];
+
 interface NavButtonProps extends ButtonProps {
 	children: ReactNode;
 	href: string;
@@ -11,7 +13,7 @@ interface NavButtonProps extends ButtonProps {
 export default function NavButton(props: NavButtonProps) {
 	const router = useRouter();
 
-	function handlePress(e) {
+	function handlePress(e: PressEvent) {
 		props.onPress?.(e);
 		router.push(props.href);
 	}
