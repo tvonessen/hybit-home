@@ -11,18 +11,14 @@ interface LogoProps {
 	showText?: boolean;
 }
 
-const Logo = ({
-	fill,
-	border,
-	style,
-	className = "",
-}: LogoProps) => {
+const Logo = ({ fill, border, style, className = "" }: LogoProps) => {
 	const getFill = (index = 0): string => {
 		if (Array.isArray(fill)) return fill[index] ?? "transparent";
 		if (fill === "none") return "transparent";
 		if (fill === "mono") return "#7f7f7f";
-		if (typeof fill === "string") return fill;
-		return ["var(--color-primary)", "var(--color-secondary)"][index] ?? "transparent";
+		return (
+			["var(--color-primary)", "var(--color-secondary)"][index] ?? "transparent"
+		);
 	};
 
 	return (

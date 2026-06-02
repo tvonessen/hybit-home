@@ -28,7 +28,6 @@ export async function sendMail({
 			subject: subject,
 			text: text,
 		});
-
 	} catch (error) {
 		throw new Error(`Error sending email: ${error}`);
 	}

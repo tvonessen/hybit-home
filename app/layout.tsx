@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
 import { Raleway } from "next/font/google";
+import type { ReactNode } from "react";
 import Footer from "@/components/Footer";
 import HeaderBar from "@/components/HeaderBar";
 import { Providers } from "./providers";

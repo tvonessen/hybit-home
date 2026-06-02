@@ -1,9 +1,9 @@
 "use client";
 
-import type { HTMLAttributes, ReactElement } from "react";
 import { Button } from "@heroui/button";
 import { Image } from "@heroui/image";
 import { Link } from "@heroui/link";
+import type { HTMLAttributes, ReactElement } from "react";
 
 interface ProjectProps extends HTMLAttributes<HTMLDivElement> {
 	image: string;
