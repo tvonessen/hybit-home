@@ -5,7 +5,7 @@ services:
     container_name: hybit
     restart: unless-stopped
     ports:
-      - "6602:6602"
+      - "127.0.0.1:6602:6602"
     env_file:
       - .env
     user: "1001:1001"
